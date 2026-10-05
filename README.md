@@ -24,4 +24,4 @@ print(p([{"role":"user","content":"Объясни Azure RBAC и задай мн�
 ## Лицензия и товарный знак
 Веса и код: Apache 2.0. Указание авторства Qwen (Alibaba) и Microsoft Learn обязательно.
 
-**QAZTECH** is a registered trade mark of QAZTECH in the United Kingdom (UK IPO) and a trade mark in other jurisdictions. The Apache 2.0 licence does not grant any right to use the QAZTECH name or logo (see §6 of the licence). Derivative models and products must not use "QAZTECH" in their names or branding without written permission; please describe them as "based on QAZTECH Tutor".
+**QAZTECH** is a registered trade mark of AISC Technologies LTD in the United Kingdom (UK IPO nos. UK00004263700, UK00004317681). The Apache 2.0 licence does not grant any right to use the QAZTECH name or logo (see §6 of the licence). Derivative models and products must not use "QAZTECH" in their names or branding without written permission; please describe them as "based on QAZTECH Tutor".
