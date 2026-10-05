@@ -1,0 +1,23 @@
+# Час 2: вход только для вашего домена через Microsoft Entra ID.
+# Заполните AZURE_TENANT_ID, CLIENT_ID, CLIENT_SECRET (App registration -> Redirect URI https://tutor.ВАШ-ДОМЕН/oauth2/callback)
+services:
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:latest
+    restart: always
+    network_mode: host
+    command:
+      - --provider=entra-id
+      - --oidc-issuer-url=https://login.microsoftonline.com/${AZURE_TENANT_ID}/v2.0
+      - --client-id=${CLIENT_ID}
+      - --client-secret=${CLIENT_SECRET}
+      - --email-domain=${ALLOWED_DOMAIN}        # напр. company.kz
+      - --cookie-secret=${COOKIE_SECRET}        # python -c "import secrets;print(secrets.token_urlsafe(32))"
+      - --upstream=http://127.0.0.1:3782
+      - --http-address=127.0.0.1:4180
+      - --redirect-url=https://${PUBLIC_HOST}/oauth2/callback
+  caddy:
+    image: caddy:latest
+    restart: always
+    network_mode: host
+    volumes: ["./Caddyfile:/etc/caddy/Caddyfile", "caddy_data:/data"]
+volumes: { caddy_data: {} }
