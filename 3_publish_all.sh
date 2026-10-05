@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Публикация во все хабы. Перед запуском: huggingface-cli login ; ollama signin ; pip install modelscope kaggle
+# Публикация во все хабы. Перед запуском: hf auth login ; ollama signin ; pip install modelscope kaggle
 set -e; BRAND=${BRAND:-QAZTECH-Tutor}; ORG=${ORG:-qaztech-platform}; B=$BRAND-8B
 cp README.md TRADEMARK.md $B/README.md
 # 1) Hugging Face: веса + GGUF (LM Studio, Jan, GPT4All читают отсюда автоматически)
-huggingface-cli upload $ORG/$B $B .
-huggingface-cli upload $ORG/$B-GGUF . . --include "*.gguf" --include "Modelfile" --include "README.md TRADEMARK.md"
+hf upload $ORG/$B $B .
+hf upload $ORG/$B-GGUF . . --include "*.gguf" --include "Modelfile" --include "README.md TRADEMARK.md"
 # 2) Ollama library: ollama run $ORG/tutor
 ollama create $ORG/tutor -f Modelfile && ollama push $ORG/tutor
 # 3) ModelScope (Китай/Азия)
