@@ -3,7 +3,7 @@ import os, torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 BASE = os.environ.get("BASE", "Qwen/Qwen3-8B"); LORA = "out/final"
-BRAND = os.environ.get("BRAND", "QAZTECH-Tutor"); ORG = os.environ.get("ORG", "qaztech")
+BRAND = os.environ.get("BRAND", "QAZTECH-Tutor"); ORG = os.environ.get("ORG", "qaztech-platform")
 OUT = f"{BRAND}-8B"
 tok = AutoTokenizer.from_pretrained(BASE)
 m = PeftModel.from_pretrained(AutoModelForCausalLM.from_pretrained(BASE, torch_dtype=torch.bfloat16), LORA).merge_and_unload()

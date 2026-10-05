@@ -11,11 +11,11 @@ pipeline_tag: text-generation
 
 ## Запуск
 ```bash
-ollama run qaztech/tutor
+ollama run qaztech-platform/tutor
 ```
 ```python
 from transformers import pipeline
-p = pipeline("text-generation", "qaztech/QAZTECH-Tutor-8B")
+p = pipeline("text-generation", "qaztech-platform/QAZTECH-Tutor-8B")
 print(p([{"role":"user","content":"Объясни Azure RBAC и задай мне вопрос."}], max_new_tokens=400)[0]["generated_text"][-1])
 ```
 ## Ограничения

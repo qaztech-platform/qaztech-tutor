@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Публикация во все хабы. Перед запуском: huggingface-cli login ; ollama signin ; pip install modelscope kaggle
-set -e; BRAND=${BRAND:-QAZTECH-Tutor}; ORG=${ORG:-qaztech}; B=$BRAND-8B
+set -e; BRAND=${BRAND:-QAZTECH-Tutor}; ORG=${ORG:-qaztech-platform}; B=$BRAND-8B
 cp README.md TRADEMARK.md $B/README.md
 # 1) Hugging Face: веса + GGUF (LM Studio, Jan, GPT4All читают отсюда автоматически)
 huggingface-cli upload $ORG/$B $B .
