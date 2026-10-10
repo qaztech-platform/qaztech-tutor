@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lint Python (syntax errors, undefined names)
+        run: pip install ruff && ruff check .
+      - name: Check shell syntax
+        run: for f in pipeline/*.sh publish/*.sh; do bash -n "$f"; done
+      - name: Validate JSON metadata
+        run: for f in publish/kaggle/*/*.json; do python -m json.tool "$f" >/dev/null; done
+      - name: Validate citation file
+        run: pip install cffconvert && cffconvert --validate
+      - name: Secret scan (full history)
+        run: docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/repo" zricethezav/gitleaks:v8.24.3 git /repo --redact -v

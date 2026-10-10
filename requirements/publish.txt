@@ -1,0 +1,3 @@
+huggingface_hub>=1.33
+modelscope
+kaggle>=1.8

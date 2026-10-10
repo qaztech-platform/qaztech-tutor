@@ -1,0 +1,14 @@
+{
+  "ownerSlug": "qaztechplatform",
+  "modelSlug": "qaztech-tutor-8b",
+  "instanceSlug": "default",
+  "framework": "transformers",
+  "overview": "QAZTECH Tutor 8B v0.2 preview, fine-tuned from Qwen3-8B (full bf16 weights).",
+  "usage": "See the model card. Use enable_thinking=False.",
+  "licenseName": "Apache 2.0",
+  "fineTunable": true,
+  "trainingData": [],
+  "modelInstanceType": "ExternalVariant",
+  "baseModelInstanceId": 0,
+  "externalBaseModelUrl": "https://huggingface.co/Qwen/Qwen3-8B"
+}

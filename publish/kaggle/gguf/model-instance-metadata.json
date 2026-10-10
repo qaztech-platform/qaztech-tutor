@@ -1,0 +1,14 @@
+{
+  "ownerSlug": "qaztechplatform",
+  "modelSlug": "qaztech-tutor-8b",
+  "instanceSlug": "default",
+  "framework": "gguf",
+  "overview": "Q4_K_M GGUF build for llama.cpp and Ollama.",
+  "usage": "See the model card. Use enable_thinking=False.",
+  "licenseName": "Apache 2.0",
+  "fineTunable": false,
+  "trainingData": [],
+  "modelInstanceType": "ExternalVariant",
+  "baseModelInstanceId": 0,
+  "externalBaseModelUrl": "https://huggingface.co/Qwen/Qwen3-8B"
+}

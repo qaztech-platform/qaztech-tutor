@@ -1,0 +1,4 @@
+# DGX Spark: data generation and filtering (stages 01-05, 09). Requires Ollama >= 0.35.
+ollama>=0.6
+transformers>=4.55,<4.56
+jinja2

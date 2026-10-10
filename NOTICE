@@ -1,0 +1,25 @@
+QAZTECH Tutor 8B
+Copyright 2026 AISC Technologies LTD
+
+This product includes software and model weights licensed under the Apache License 2.0.
+
+Base model
+  Qwen3-8B, Copyright Alibaba Cloud. Licensed under the Apache License 2.0.
+  https://huggingface.co/Qwen/Qwen3-8B
+
+Teacher model used to generate synthetic training data
+  Qwen3-30B-A3B-Instruct-2507, Copyright Alibaba Cloud. Licensed under the Apache License 2.0.
+  https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507
+
+Source material for synthetic data
+  Microsoft Azure documentation, https://github.com/MicrosoftDocs/azure-docs
+  Copyright Microsoft Corporation. Licensed under Creative Commons Attribution 4.0
+  International (CC BY 4.0). Training dialogues were generated from excerpts of this
+  material; no real Microsoft certification exam questions are included.
+  Microsoft and Azure are trademarks of the Microsoft group of companies.
+
+Tooling
+  llama.cpp (MIT) was used for GGUF conversion and quantization.
+
+QAZTECH is a registered trade mark of AISC Technologies LTD (UK IPO nos.
+UK00004263700, UK00004317681, UK00004373195). See TRADEMARK.md.

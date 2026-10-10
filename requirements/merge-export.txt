@@ -1,0 +1,8 @@
+# DGX Spark CPU environment (stages 07-08). Install torch from the CPU index:
+#   pip install "torch>=2.8,<2.9" --index-url https://download.pytorch.org/whl/cpu
+transformers>=4.55,<4.56
+peft>=0.17,<0.18
+accelerate
+jinja2
+sentencepiece
+protobuf

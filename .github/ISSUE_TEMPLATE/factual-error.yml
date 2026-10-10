@@ -1,0 +1,21 @@
+name: Factual error
+description: The model gave wrong Azure information
+labels: [factual-error]
+body:
+  - type: textarea
+    id: prompt
+    attributes: {label: Prompt, description: Exact text you sent}
+    validations: {required: true}
+  - type: textarea
+    id: answer
+    attributes: {label: Model answer}
+    validations: {required: true}
+  - type: input
+    id: source
+    attributes: {label: Microsoft Learn link with the correct information}
+    validations: {required: true}
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build
+      options: [Ollama qaztech-platform/tutor, Hugging Face bf16, GGUF Q4_K_M, GGUF Q8_0, Other]

@@ -1,0 +1,7 @@
+# Lambda 1x A100 40 GB, Lambda Stack 22.04 (stage 06). Versions used for v0.2.
+torch>=2.8,<2.9
+transformers>=4.55,<4.56
+trl>=0.21,<0.22
+peft>=0.17,<0.18
+accelerate>=1.10,<1.11
+datasets>=4.0,<5

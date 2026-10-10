@@ -1,0 +1,24 @@
+name: Language quality
+description: Unnatural, wrong-language or incorrect wording (Kazakh, Arabic, Russian, Spanish, English)
+labels: [language-quality]
+body:
+  - type: dropdown
+    id: language
+    attributes: {label: Language, options: [Kazakh, Arabic, Russian, Spanish, English]}
+    validations: {required: true}
+  - type: textarea
+    id: prompt
+    attributes: {label: Prompt}
+    validations: {required: true}
+  - type: textarea
+    id: answer
+    attributes: {label: Model answer}
+    validations: {required: true}
+  - type: textarea
+    id: correction
+    attributes: {label: Suggested correction}
+  - type: checkboxes
+    id: native
+    attributes:
+      label: Reviewer
+      options: [{label: I am a native or professional speaker of this language}]

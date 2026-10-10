@@ -1,0 +1,14 @@
+[project]
+name = "qaztech-tutor"
+version = "0.2.0"
+description = "Reproducible pipeline for QAZTECH Tutor 8B, an open multilingual engineering tutor"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 160
+target-version = "py310"
+
+[tool.ruff.lint]
+# Syntax errors and undefined names; research scripts keep a compact style.
+select = ["E9", "F63", "F7", "F82"]
